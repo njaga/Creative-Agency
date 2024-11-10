@@ -26,12 +26,23 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-09',
 
   app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
+    layoutTransition: { name: 'layout', mode: 'out-in' },
     head: {
-      title: 'Votre Entreprise - Solutions Informatiques Professionnelles',
+      title: 'ABI Group',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' }
       ]
+    }
+  },
+
+  routeRules: {
+    '/services': {
+      redirect: { statusCode: 301, to: '/services/' }
+    },
+    '/services/**': {
+      swr: true
     }
   }
 })

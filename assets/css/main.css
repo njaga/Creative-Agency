@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities; 
+@tailwind utilities;
+
+/* Transitions de page */
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s ease-in-out;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Transitions de layout */
+.layout-enter-active,
+.layout-leave-active {
+  transition: all 0.3s ease-in-out;
+}
+
+.layout-enter-from,
+.layout-leave-to {
+  opacity: 0;
+  transform: translateY(20px);
+} 
