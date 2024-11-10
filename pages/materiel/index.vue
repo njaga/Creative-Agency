@@ -1,4 +1,9 @@
 <template>
+        <AppHead
+      title="Matériel Informatique Professionnel"
+      description="Découvrez notre gamme complète de matériel informatique professionnel : postes de travail, serveurs, solutions réseau et plus encore."
+      image="/images/materiel-og.jpg"
+    />
   <div class="relative overflow-hidden">
     <!-- Hero Section -->
     <section class="py-24 relative">
