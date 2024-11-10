@@ -1,0 +1,21 @@
+{
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "strict": true,
+    "skipLibCheck": true,
+    "types": [
+      "nuxt",
+      "@types/node"
+    ],
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"]
+    },
+    "allowJs": true,
+    "noImplicitAny": false
+  },
+  "include": [
+    ".nuxt/nuxt.d.ts",
+    "**/*"
+  ]
+}

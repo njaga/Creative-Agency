@@ -1,0 +1,19 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fenêtres d'application -->
+  <rect x="100" y="100" width="250" height="200" rx="10" fill="#DBEAFE"/>
+  <rect x="400" y="100" width="250" height="200" rx="10" fill="#93C5FD"/>
+  <rect x="100" y="350" width="250" height="200" rx="10" fill="#60A5FA"/>
+  <rect x="400" y="350" width="250" height="200" rx="10" fill="#2563EB"/>
+  
+  <!-- Icônes -->
+  <rect x="120" y="120" width="40" height="40" rx="5" fill="#FCD34D"/>
+  <rect x="420" y="120" width="40" height="40" rx="5" fill="#F87171"/>
+  <rect x="120" y="370" width="40" height="40" rx="5" fill="#34D399"/>
+  <rect x="420" y="370" width="40" height="40" rx="5" fill="#1E40AF"/>
+  
+  <!-- Lignes de connexion -->
+  <path d="M350 200 L 400 200" stroke="#1E40AF" stroke-width="2"/>
+  <path d="M350 450 L 400 450" stroke="#1E40AF" stroke-width="2"/>
+  <path d="M225 300 L 225 350" stroke="#1E40AF" stroke-width="2"/>
+  <path d="M525 300 L 525 350" stroke="#1E40AF" stroke-width="2"/>
+</svg> 

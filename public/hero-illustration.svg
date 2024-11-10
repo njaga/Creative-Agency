@@ -1,0 +1,19 @@
+<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Laptop Base -->
+  <rect x="100" y="150" width="300" height="200" fill="#ffffff" rx="10"/>
+  <rect x="150" y="180" width="200" height="140" fill="#e5e7eb"/>
+  
+  <!-- Screen Content -->
+  <rect x="170" y="200" width="160" height="20" fill="#ffffff" rx="4"/>
+  <rect x="170" y="230" width="120" height="20" fill="#ffffff" rx="4"/>
+  <rect x="170" y="260" width="140" height="20" fill="#ffffff" rx="4"/>
+  
+  <!-- Floating Elements -->
+  <circle cx="400" cy="100" r="30" fill="#fbbf24"/>
+  <rect x="50" y="80" width="60" height="60" fill="#ffffff" rx="8" transform="rotate(-15)"/>
+  <rect x="380" y="250" width="40" height="40" fill="#ffffff" rx="8" transform="rotate(15)"/>
+  
+  <!-- Decorative Lines -->
+  <line x1="420" y1="80" x2="460" y2="40" stroke="#fbbf24" stroke-width="4"/>
+  <line x1="30" y1="200" x2="70" y2="160" stroke="#fbbf24" stroke-width="4"/>
+</svg>

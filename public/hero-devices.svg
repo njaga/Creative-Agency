@@ -1,0 +1,27 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ordinateur portable -->
+  <g transform="translate(100, 100)">
+    <rect x="0" y="0" width="400" height="250" rx="20" fill="#1E40AF"/>
+    <rect x="20" y="20" width="360" height="190" rx="5" fill="#DBEAFE"/>
+    <rect x="100" y="250" width="200" height="20" fill="#1E40AF"/>
+  </g>
+  
+  <!-- Tablette -->
+  <g transform="translate(550, 150)">
+    <rect x="0" y="0" width="150" height="200" rx="15" fill="#1E40AF"/>
+    <rect x="10" y="20" width="130" height="160" rx="5" fill="#DBEAFE"/>
+    <circle cx="75" cy="190" r="8" fill="#60A5FA"/>
+  </g>
+  
+  <!-- Téléphone -->
+  <g transform="translate(350, 380)">
+    <rect x="0" y="0" width="100" height="180" rx="15" fill="#1E40AF"/>
+    <rect x="8" y="15" width="84" height="150" rx="5" fill="#DBEAFE"/>
+    <circle cx="50" cy="172" r="6" fill="#60A5FA"/>
+  </g>
+  
+  <!-- Éléments décoratifs -->
+  <circle cx="150" cy="450" r="30" fill="#FCD34D" fill-opacity="0.3"/>
+  <circle cx="650" cy="150" r="40" fill="#F87171" fill-opacity="0.3"/>
+  <circle cx="400" cy="100" r="25" fill="#34D399" fill-opacity="0.3"/>
+</svg> 

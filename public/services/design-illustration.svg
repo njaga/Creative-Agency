@@ -1,0 +1,24 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Palette -->
+  <circle cx="400" cy="300" r="200" fill="#DBEAFE"/>
+  
+  <!-- Couleurs -->
+  <circle cx="400" cy="200" r="50" fill="#FCD34D"/>
+  <circle cx="500" cy="300" r="50" fill="#F87171"/>
+  <circle cx="400" cy="400" r="50" fill="#34D399"/>
+  <circle cx="300" cy="300" r="50" fill="#60A5FA"/>
+  
+  <!-- Outils -->
+  <rect x="550" y="150" width="100" height="20" rx="10" fill="#1E40AF"/>
+  <rect x="550" y="190" width="80" height="20" rx="10" fill="#1E40AF"/>
+  <rect x="550" y="230" width="120" height="20" rx="10" fill="#1E40AF"/>
+  
+  <!-- Règle -->
+  <rect x="150" y="150" width="20" height="300" rx="5" fill="#1E40AF"/>
+  <rect x="140" y="170" width="40" height="2" fill="#FFFFFF"/>
+  <rect x="140" y="220" width="40" height="2" fill="#FFFFFF"/>
+  <rect x="140" y="270" width="40" height="2" fill="#FFFFFF"/>
+  <rect x="140" y="320" width="40" height="2" fill="#FFFFFF"/>
+  <rect x="140" y="370" width="40" height="2" fill="#FFFFFF"/>
+  <rect x="140" y="420" width="40" height="2" fill="#FFFFFF"/>
+</svg> 

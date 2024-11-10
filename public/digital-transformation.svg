@@ -1,0 +1,34 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cercles décoratifs -->
+  <circle cx="400" cy="300" r="250" fill="#DBEAFE" fill-opacity="0.3"/>
+  <circle cx="400" cy="300" r="200" fill="#93C5FD" fill-opacity="0.2"/>
+  
+  <!-- Éléments de transformation -->
+  <g transform="translate(250, 150)">
+    <!-- Icône de données -->
+    <rect x="0" y="0" width="100" height="120" rx="10" fill="#1E40AF"/>
+    <rect x="20" y="20" width="60" height="10" rx="2" fill="#60A5FA"/>
+    <rect x="20" y="40" width="40" height="10" rx="2" fill="#60A5FA"/>
+    <rect x="20" y="60" width="50" height="10" rx="2" fill="#60A5FA"/>
+    
+    <!-- Flèches de transformation -->
+    <path d="M120 60 L180 60 M180 50 L200 60 L180 70" stroke="#FCD34D" stroke-width="4"/>
+    
+    <!-- Résultat digital -->
+    <rect x="220" y="0" width="100" height="120" rx="10" fill="#059669"/>
+    <rect x="240" y="20" width="60" height="10" rx="2" fill="#34D399"/>
+    <rect x="240" y="40" width="40" height="10" rx="2" fill="#34D399"/>
+    <rect x="240" y="60" width="50" height="10" rx="2" fill="#34D399"/>
+  </g>
+  
+  <!-- Éléments connectés -->
+  <circle cx="200" cy="400" r="30" fill="#F87171"/>
+  <circle cx="600" cy="400" r="30" fill="#F87171"/>
+  <path d="M230 400 L570 400" stroke="#F87171" stroke-width="4" stroke-dasharray="10 5"/>
+  
+  <!-- Points décoratifs -->
+  <circle cx="150" cy="150" r="10" fill="#FCD34D"/>
+  <circle cx="650" cy="150" r="10" fill="#FCD34D"/>
+  <circle cx="150" cy="450" r="10" fill="#FCD34D"/>
+  <circle cx="650" cy="450" r="10" fill="#FCD34D"/>
+</svg> 

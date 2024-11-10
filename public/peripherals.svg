@@ -1,0 +1,39 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cercle décoratif de fond -->
+  <circle cx="400" cy="300" r="200" fill="#DBEAFE" fill-opacity="0.3"/>
+  
+  <!-- Clavier -->
+  <g transform="translate(250, 200)">
+    <rect x="0" y="0" width="300" height="120" rx="15" fill="#1E40AF"/>
+    <rect x="20" y="20" width="260" height="80" rx="10" fill="#60A5FA"/>
+    <!-- Touches -->
+    <g fill="#FFFFFF" fill-opacity="0.8">
+      <rect x="30" y="30" width="20" height="20" rx="5"/>
+      <rect x="60" y="30" width="20" height="20" rx="5"/>
+      <rect x="90" y="30" width="20" height="20" rx="5"/>
+      <rect x="45" y="60" width="20" height="20" rx="5"/>
+      <rect x="75" y="60" width="20" height="20" rx="5"/>
+      <rect x="105" y="60" width="120" height="20" rx="5"/>
+    </g>
+  </g>
+
+  <!-- Souris -->
+  <g transform="translate(600, 250)">
+    <path d="M0 0 C0 0 30 0 30 30 L30 90 C30 120 0 120 0 120 L0 0Z" 
+          fill="#1E40AF"/>
+    <rect x="10" y="10" width="10" height="30" rx="5" fill="#60A5FA"/>
+  </g>
+
+  <!-- Casque -->
+  <g transform="translate(150, 250)">
+    <path d="M0 50 C0 0 80 0 80 50" stroke="#1E40AF" stroke-width="20" stroke-linecap="round"/>
+    <circle cx="0" cy="50" r="25" fill="#1E40AF"/>
+    <circle cx="80" cy="50" r="25" fill="#1E40AF"/>
+  </g>
+
+  <!-- Points décoratifs -->
+  <circle cx="150" cy="150" r="10" fill="#FCD34D"/>
+  <circle cx="650" cy="150" r="10" fill="#FCD34D"/>
+  <circle cx="150" cy="450" r="10" fill="#FCD34D"/>
+  <circle cx="650" cy="450" r="10" fill="#FCD34D"/>
+</svg> 

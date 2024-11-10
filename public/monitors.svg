@@ -1,0 +1,26 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cercle décoratif de fond -->
+  <circle cx="400" cy="300" r="200" fill="#DBEAFE" fill-opacity="0.3"/>
+  
+  <!-- Écran principal -->
+  <g transform="translate(200, 100)">
+    <!-- Cadre -->
+    <rect x="0" y="0" width="400" height="300" rx="20" fill="#1E40AF"/>
+    <!-- Écran -->
+    <rect x="20" y="20" width="360" height="260" rx="10" fill="#FFFFFF"/>
+    <!-- Éléments d'interface -->
+    <rect x="40" y="40" width="320" height="40" rx="5" fill="#60A5FA" fill-opacity="0.3"/>
+    <rect x="40" y="100" width="150" height="160" rx="5" fill="#60A5FA" fill-opacity="0.2"/>
+    <rect x="210" y="100" width="150" height="160" rx="5" fill="#60A5FA" fill-opacity="0.2"/>
+    
+    <!-- Support -->
+    <path d="M180 300 L220 300 L200 400 L150 400 L250 400" 
+          stroke="#1E40AF" stroke-width="20" stroke-linecap="round"/>
+  </g>
+
+  <!-- Points décoratifs -->
+  <circle cx="150" cy="150" r="10" fill="#FCD34D"/>
+  <circle cx="650" cy="150" r="10" fill="#FCD34D"/>
+  <circle cx="150" cy="450" r="10" fill="#FCD34D"/>
+  <circle cx="650" cy="450" r="10" fill="#FCD34D"/>
+</svg> 

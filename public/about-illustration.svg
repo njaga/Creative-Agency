@@ -1,0 +1,21 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Formes géométriques abstraites -->
+  <circle cx="400" cy="300" r="200" fill="url(#gradient1)" opacity="0.8"/>
+  <rect x="250" y="150" width="300" height="300" rx="20" fill="url(#gradient2)" opacity="0.6"/>
+  
+  <!-- Éléments technologiques -->
+  <path d="M300 250 L500 250 M300 300 L500 300 M300 350 L500 350" 
+        stroke="#4F46E5" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Dégradés -->
+  <defs>
+    <linearGradient id="gradient1" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="gradient2" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EAB308"/>
+      <stop offset="100%" stop-color="#CA8A04"/>
+    </linearGradient>
+  </defs>
+</svg>
