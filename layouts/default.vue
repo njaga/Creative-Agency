@@ -96,127 +96,108 @@
     </main>
 
     <!-- Remplacer la section footer -->
-    <footer class="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white overflow-hidden">
-      <!-- Motif de fond amélioré -->
+    <footer class="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white pt-24 pb-12 overflow-hidden">
+      <!-- Effets de fond -->
       <div class="absolute inset-0">
-        <div class="absolute inset-0 bg-grid-pattern opacity-[0.03]"></div>
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-400/5 to-yellow-400/5"></div>
+        <!-- Motif en pointillés -->
+        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0); background-size: 40px 40px;"></div>
+        <!-- Blobs animés -->
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-blue-400/20 via-indigo-400/20 to-transparent rounded-full blur-3xl animate-blob"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-yellow-400/10 via-orange-400/10 to-transparent rounded-full blur-3xl animate-blob animation-delay-2000"></div>
       </div>
-      
-      <!-- Blobs décoratifs améliorés -->
-      <div class="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-br from-blue-400/20 to-transparent rounded-full blur-3xl animate-blob"></div>
-      <div class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-yellow-400/20 to-transparent rounded-full blur-3xl animate-blob animation-delay-2000"></div>
-      <div class="absolute top-1/2 left-1/4 w-1/3 h-1/3 bg-gradient-to-tr from-blue-300/10 to-transparent rounded-full blur-3xl animate-blob animation-delay-4000"></div>
 
-      <div class="relative max-w-7xl mx-auto pt-20 pb-12 px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
-          <!-- Logo et Description modernisés -->
-          <div class="md:col-span-2 space-y-8">
-            <div class="flex items-center space-x-4 group">
-              <div class="relative">
-                <div class="absolute inset-0 bg-blue-400/20 rounded-full blur-xl group-hover:bg-blue-400/30 transition-colors duration-500"></div>
-                <img class="h-14 w-auto relative transform group-hover:scale-110 transition-transform duration-500" 
-                     src="/logo.svg" 
-                     alt="ABI Logo" />
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section principale -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16">
+          <!-- Logo et description -->
+          <div class="md:col-span-5 space-y-8">
+            <div class="flex items-center space-x-4">
+              <div class="relative group">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-400/30 to-indigo-400/30 rounded-full blur-xl transition-all duration-500 group-hover:from-blue-400/40 group-hover:to-indigo-400/40"></div>
+                <img src="/logo.svg" alt="ABI Logo" class="h-16 w-auto relative transform group-hover:scale-110 transition-transform duration-500"/>
               </div>
-              <span class="text-3xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-                ABI
-              </span>
+              <span class="text-4xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">ABI</span>
             </div>
-            <p class="text-blue-100 max-w-md text-lg leading-relaxed">
-              Arame Business Informatique - Votre partenaire digital de confiance pour la transformation numérique de votre entreprise.
+            <p class="text-lg text-blue-100/90 leading-relaxed">
+              Votre partenaire de confiance pour la transformation numérique. Nous créons des solutions innovantes qui propulsent votre entreprise vers l'avenir.
             </p>
+            <!-- Réseaux sociaux -->
+            <div class="flex gap-4">
+              <a v-for="social in socials" 
+                 :key="social.icon" 
+                 :href="social.link"
+                 class="group relative p-3 bg-white/5 rounded-xl hover:bg-white/10 transition-all duration-300"
+                 target="_blank"
+              >
+                <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 rounded-xl transition-opacity duration-300"></div>
+                <Icon :name="social.icon" class="w-6 h-6 text-white/70 group-hover:text-white transition-colors duration-300 relative z-10"/>
+              </a>
+            </div>
           </div>
 
-          <!-- Navigation Rapide modernisée -->
-          <div>
-            <h3 class="text-lg font-semibold text-yellow-400 mb-8 relative inline-block">
-              Navigation
-              <span class="absolute -bottom-2 left-0 w-12 h-0.5 bg-yellow-400/50 rounded-full"></span>
-            </h3>
-            <ul class="space-y-5">
+          <!-- Navigation -->
+          <div class="md:col-span-3">
+            <h3 class="text-xl font-semibold text-white mb-6">Navigation</h3>
+            <ul class="space-y-4">
               <li v-for="link in links" :key="link.to">
-                <NuxtLink 
-                  :to="link.to"
-                  class="text-blue-100 hover:text-white transition-colors duration-300 flex items-center group text-lg"
-                >
-                  <span class="w-2 h-2 rounded-full bg-yellow-400 mr-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-150"></span>
+                <NuxtLink :to="link.to" class="group flex items-center text-blue-100/80 hover:text-white transition-colors duration-300">
+                  <span class="w-1.5 h-1.5 rounded-full bg-yellow-400/60 mr-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-0 group-hover:scale-100"></span>
                   {{ link.text }}
                 </NuxtLink>
               </li>
             </ul>
           </div>
 
-          <!-- Contact modernisé -->
-          <div>
-            <h3 class="text-lg font-semibold text-yellow-400 mb-8 relative inline-block">
-              Contact
-              <span class="absolute -bottom-2 left-0 w-12 h-0.5 bg-yellow-400/50 rounded-full"></span>
-            </h3>
+          <!-- Contact -->
+          <div class="md:col-span-4">
+            <h3 class="text-xl font-semibold text-white mb-6">Contact</h3>
             <div class="space-y-6">
-              <a 
-                href="mailto:contact@abi.com"
-                class="flex items-center text-blue-100 hover:text-white transition-colors duration-300 group"
-              >
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-700/50 to-blue-600/50 flex items-center justify-center mr-4 group-hover:from-blue-600/50 group-hover:to-blue-500/50 transition-all duration-300 transform group-hover:scale-110">
-                  <EnvelopeIcon class="h-5 w-5" />
+              <a href="mailto:contact@abi.com" class="flex items-center group">
+                <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mr-4 group-hover:bg-white/10 transition-all duration-300">
+                  <EnvelopeIcon class="h-5 w-5 text-yellow-400"/>
                 </div>
-                <span class="text-lg">contact@abi.com</span>
+                <div>
+                  <p class="text-sm text-blue-100/70">Email</p>
+                  <p class="text-white group-hover:text-yellow-400 transition-colors duration-300">contact@abi.com</p>
+                </div>
               </a>
-              <a 
-                href="tel:+221XXXXXXXX"
-                class="flex items-center text-blue-100 hover:text-white transition-colors duration-300 group"
-              >
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-700/50 to-blue-600/50 flex items-center justify-center mr-4 group-hover:from-blue-600/50 group-hover:to-blue-500/50 transition-all duration-300 transform group-hover:scale-110">
-                  <PhoneIcon class="h-5 w-5" />
-                </div>
-                <span class="text-lg">+221 XX XXX XX XX</span>
-              </a>
-              <div class="flex items-center text-blue-100 group">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-700/50 to-blue-600/50 flex items-center justify-center mr-4">
-                  <MapPinIcon class="h-5 w-5" />
-                </div>
-                <span class="text-lg">Dakar, Sénégal</span>
-              </div>
-            </div>
 
-            <!-- Réseaux sociaux modernisés -->
-            <div class="mt-10">
-              <div class="flex space-x-5">
-                <a 
-                  v-for="(social, index) in socials" 
-                  :key="index"
-                  :href="social.link" 
-                  class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-700/50 to-blue-600/50 flex items-center justify-center hover:from-blue-600/50 hover:to-blue-500/50 transition-all duration-300 transform hover:scale-110 group"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon 
-                    :name="social.icon" 
-                    class="h-6 w-6 text-blue-100 group-hover:text-white transition-colors"
-                  />
-                </a>
+              <a href="tel:+221XXXXXXXX" class="flex items-center group">
+                <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mr-4 group-hover:bg-white/10 transition-all duration-300">
+                  <PhoneIcon class="h-5 w-5 text-yellow-400"/>
+                </div>
+                <div>
+                  <p class="text-sm text-blue-100/70">Téléphone</p>
+                  <p class="text-white group-hover:text-yellow-400 transition-colors duration-300">+221 XX XXX XX XX</p>
+                </div>
+              </a>
+
+              <div class="flex items-center">
+                <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mr-4">
+                  <MapPinIcon class="h-5 w-5 text-yellow-400"/>
+                </div>
+                <div>
+                  <p class="text-sm text-blue-100/70">Adresse</p>
+                  <p class="text-white">Dakar, Sénégal</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Séparateur modernisé -->
-        <div class="mt-20 pt-8 border-t border-blue-700/50">
-          <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p class="text-sm text-blue-200">
+        <!-- Copyright -->
+        <div class="mt-20 pt-8 border-t border-white/10">
+          <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-blue-100/70">
               &copy; {{ new Date().getFullYear() }} ABI. Tous droits réservés.
             </p>
-            <a 
-              href="https://ndiagandiaye.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              class="text-sm text-blue-200 hover:text-white transition-colors duration-300 flex items-center group"
-            >
+            <a href="https://ndiagandiaye.com" 
+               target="_blank" 
+               class="group text-blue-100/70 hover:text-white transition-colors duration-300">
               Développé par 
-              <span class="font-medium ml-2 relative">
+              <span class="font-medium relative">
                 Ndiaga Ndiaye
-                <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-yellow-400 to-yellow-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+                <span class="absolute -bottom-px left-0 w-full h-px bg-gradient-to-r from-yellow-400/60 to-yellow-400/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
               </span>
             </a>
           </div>
