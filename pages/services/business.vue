@@ -11,29 +11,29 @@
         <div class="text-center mb-20">
           <h1 class="text-5xl font-bold mb-6 relative inline-block">
             <span class="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-              Solutions Matérielles
+              Solutions Business
             </span>
             <div class="absolute -top-6 -right-6 w-12 h-12 bg-yellow-200/30 rounded-full blur-xl"></div>
           </h1>
           <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            Équipements professionnels et solutions d'infrastructure IT
+            Des solutions sur mesure pour optimiser et développer votre activité
           </p>
         </div>
       </div>
     </section>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <!-- Expertise Section -->
+      <!-- Solutions Section -->
       <section class="mb-24">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div class="relative">
             <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl transform rotate-1 opacity-10"></div>
             <div class="relative bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-blue-100/50">
-              <h2 class="text-3xl font-bold text-blue-800 mb-8">Notre Expertise</h2>
+              <h2 class="text-3xl font-bold text-blue-800 mb-8">Nos Solutions Business</h2>
               <ul class="space-y-6">
-                <li v-for="(item, index) in expertise" :key="index" class="flex items-start group">
+                <li v-for="(item, index) in solutions" :key="index" class="flex items-start group">
                   <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center mr-4 group-hover:bg-blue-100 transition-colors">
-                    <Icon :name="expertiseIcons[index]" class="w-5 h-5 text-blue-600" />
+                    <Icon :name="solutionIcons[index]" class="w-5 h-5 text-blue-600" />
                   </div>
                   <div>
                     <h3 class="font-semibold text-gray-900 mb-1">{{ item.title }}</h3>
@@ -46,8 +46,8 @@
 
           <div class="relative">
             <img
-              src="/services/hardware-illustration.svg"
-              alt="Solutions Matérielles"
+              src="/img/services/business-solutions.svg"
+              alt="Solutions Business"
               class="w-full rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
             />
             <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-yellow-400/20 rounded-full blur-2xl"></div>
@@ -56,38 +56,21 @@
         </div>
       </section>
 
-      <!-- Services Section -->
-      <section class="mb-24">
-        <h2 class="text-3xl font-bold text-center mb-12">Nos Solutions Matérielles</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div v-for="service in services" :key="service.title" class="relative group">
-            <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            <div class="relative p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div class="w-12 h-12 bg-blue-600/10 rounded-lg flex items-center justify-center mb-4">
-                <Icon :name="service.icon" class="w-6 h-6 text-blue-600" />
-              </div>
-              <h3 class="text-xl font-semibold mb-2">{{ service.title }}</h3>
-              <p class="text-gray-600">{{ service.description }}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Maintenance Section -->
+      <!-- Avantages Section -->
       <section class="mb-24">
         <div class="relative">
           <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl transform -rotate-1 opacity-10"></div>
           <div class="relative bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-12 border border-blue-100/50">
-            <h2 class="text-3xl font-bold text-blue-800 mb-12 text-center">Services de Maintenance</h2>
+            <h2 class="text-3xl font-bold text-blue-800 mb-12 text-center">Vos Avantages</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-              <div v-for="(item, index) in maintenance" :key="index" class="relative group">
+              <div v-for="(advantage, index) in advantages" :key="index" class="relative group">
                 <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div class="relative p-6">
                   <div class="w-16 h-16 bg-blue-600/10 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-600/20 transition-colors">
-                    <Icon :name="maintenanceIcons[index]" class="w-8 h-8 text-blue-600" />
+                    <Icon :name="advantageIcons[index]" class="w-8 h-8 text-blue-600" />
                   </div>
-                  <h3 class="text-xl font-semibold text-gray-900 mb-4 text-center">{{ item.title }}</h3>
-                  <p class="text-gray-600 text-center">{{ item.description }}</p>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-4 text-center">{{ advantage.title }}</h3>
+                  <p class="text-gray-600 text-center">{{ advantage.description }}</p>
                 </div>
               </div>
             </div>
@@ -100,18 +83,18 @@
         <div class="absolute inset-0 bg-grid-pattern opacity-[0.05]"></div>
         <div class="relative z-10 text-center">
           <h2 class="text-3xl font-bold text-white mb-6">
-            Besoin d'Équipements Professionnels ?
+            Prêt à Transformer Votre Business ?
           </h2>
           <p class="text-blue-100 mb-8 text-lg max-w-2xl mx-auto">
-            Contactez nos experts pour un conseil personnalisé et un devis adapté à vos besoins.
+            Contactez-nous pour découvrir comment nos solutions peuvent répondre à vos besoins spécifiques.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <NuxtLink
-              to="/devis"
+              to="/contact"
               class="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl 
                      shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group"
             >
-              Demander un devis
+              Nous contacter
               <Icon 
                 name="heroicons:arrow-right" 
                 class="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform"
@@ -138,93 +121,60 @@
 </template>
 
 <script setup>
-const expertiseIcons = [
-  'heroicons:computer-desktop',
-  'heroicons:server',
-  'heroicons:signal',
-  'heroicons:shield-check',
-  'heroicons:printer',
-  'heroicons:wrench-screwdriver'
+const solutionIcons = [
+  'heroicons:chart-bar',
+  'heroicons:cog-6-tooth',
+  'heroicons:document-text',
+  'heroicons:users',
+  'heroicons:cube-transparent',
+  'heroicons:shield-check'
 ]
 
-const expertise = [
+const solutions = [
   {
-    title: 'Postes de Travail',
-    description: 'Ordinateurs et périphériques professionnels'
+    title: 'Gestion d\'Entreprise',
+    description: 'Solutions ERP personnalisées pour optimiser vos processus'
   },
   {
-    title: 'Infrastructure Réseau',
-    description: 'Solutions serveurs et stockage'
+    title: 'Automatisation',
+    description: 'Automatisez vos tâches répétitives et gagnez en efficacité'
   },
   {
-    title: 'Réseaux & Télécoms',
-    description: 'Équipements réseau et communication'
+    title: 'Gestion Documentaire',
+    description: 'Centralisez et sécurisez tous vos documents importants'
   },
   {
-    title: 'Sécurité',
-    description: 'Solutions de sécurité physique et logique'
+    title: 'CRM & Service Client',
+    description: 'Améliorez la relation avec vos clients et prospects'
   },
   {
-    title: 'Impression',
-    description: 'Solutions d\'impression professionnelles'
+    title: 'Solutions Cloud',
+    description: 'Accédez à vos données en toute sécurité, partout'
   },
   {
-    title: 'Maintenance',
-    description: 'Support technique et maintenance préventive'
+    title: 'Sécurité & Conformité',
+    description: 'Protection des données et respect des normes en vigueur'
   }
 ]
 
-const services = [
-  {
-    icon: 'heroicons:computer-desktop',
-    title: 'Postes de Travail',
-    description: 'PC, portables et stations de travail'
-  },
-  {
-    icon: 'heroicons:server',
-    title: 'Serveurs',
-    description: 'Solutions de serveurs et stockage'
-  },
-  {
-    icon: 'heroicons:signal',
-    title: 'Réseaux',
-    description: 'Switches, routeurs et points d\'accès'
-  },
-  {
-    icon: 'heroicons:printer',
-    title: 'Impression',
-    description: 'Imprimantes et multifonctions'
-  },
-  {
-    icon: 'heroicons:shield-check',
-    title: 'Sécurité',
-    description: 'Caméras et contrôle d\'accès'
-  },
-  {
-    icon: 'heroicons:device-phone-mobile',
-    title: 'Mobilité',
-    description: 'Solutions mobiles professionnelles'
-  }
-]
-
-const maintenanceIcons = [
-  'heroicons:wrench-screwdriver',
+const advantageIcons = [
+  'heroicons:arrow-trending-up',
   'heroicons:clock',
-  'heroicons:arrow-path'
+  'heroicons:currency-dollar'
 ]
 
-const maintenance = [
+const advantages = [
   {
-    title: 'Support Technique',
-    description: 'Assistance et dépannage sur site ou à distance'
+    title: 'Productivité Accrue',
+    description: 'Optimisez vos processus et augmentez votre efficacité opérationnelle.'
   },
   {
-    title: 'Maintenance Préventive',
-    description: 'Entretien régulier et mises à jour'
+    title: 'Gain de Temps',
+    description: 'Automatisez les tâches répétitives et concentrez-vous sur l\'essentiel.'
   },
   {
-    title: 'Contrats de Service',
-    description: 'Solutions de maintenance personnalisées'
+    title: 'ROI Optimisé',
+    description: 'Réduisez vos coûts et maximisez votre retour sur investissement.'
   }
 ]
 </script>

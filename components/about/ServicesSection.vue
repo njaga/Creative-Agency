@@ -45,37 +45,37 @@ const servicesList = computed(() => [
     title: 'Développement Web',
     description: 'Sites web professionnels, applications web et solutions e-commerce sur mesure.',
     icon: 'heroicons:computer-desktop',
-    link: '/services#web'
+    link: '/services/web'
   },
   {
     title: 'Solutions Digitales',
     description: 'Transformation digitale, automatisation des processus et outils collaboratifs.',
     icon: 'heroicons:cube-transparent',
-    link: '/services#digital'
+    link: '/services/digital'
   },
   {
     title: 'Support & Maintenance',
     description: 'Assistance technique, maintenance préventive et évolutive de vos solutions.',
     icon: 'heroicons:wrench-screwdriver',
-    link: '/services#support'
+    link: '/services/support'
   },
   {
     title: 'Applications Mobiles',
     description: 'Développement d\'applications mobiles natives et cross-platform pour iOS et Android.',
     icon: 'heroicons:device-phone-mobile',
-    link: '/services#mobile'
+    link: '/services/mobile'
   },
   {
     title: 'Design UI/UX',
     description: 'Création d\'interfaces utilisateur modernes et d\'expériences utilisateur optimisées.',
     icon: 'heroicons:swatch',
-    link: '/services#design'
+    link: '/services/design'
   },
   {
     title: 'Marketing Digital',
     description: 'Stratégies marketing pour augmenter votre visibilité en ligne et attirer plus de clients.',
     icon: 'heroicons:sparkles',
-    link: '/services#marketing'
+    link: '/services/marketing'
   }
 ])
 </script> 

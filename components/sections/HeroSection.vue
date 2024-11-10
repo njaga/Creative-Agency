@@ -4,8 +4,8 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         <div class="text-center lg:text-left">
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
-            Solutions Digitales & 
-            <span class="text-yellow-400 block sm:inline">Matériel</span>
+            Solutions IT & 
+            <span class="text-yellow-400 block sm:inline">Matériel informatique</span>
           </h1>
           <p class="text-lg sm:text-xl text-blue-100 mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0">
             Votre partenaire unique pour tous vos besoins informatiques : 

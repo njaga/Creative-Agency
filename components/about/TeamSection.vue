@@ -33,19 +33,19 @@
 <script setup>
 const team = ref([
   {
-    name: 'Arame Ndiaye',
+    name: 'Arame Gueye',
     role: 'Fondatrice & CEO',
     description: 'Experte en transformation digitale avec plus de 10 ans d\'expérience.',
     image: '/images/team/avatar.png'
   },
   {
-    name: 'John Doe',
+    name: 'Ndiaga Ndiaye',
     role: 'Directeur Technique',
     description: 'Architecte logiciel spécialisé en solutions web et mobiles.',
     image: '/images/team/avatar.png'
   },
   {
-    name: 'Jane Smith',
+    name: 'Moussa Sy',
     role: 'Responsable Marketing',
     description: 'Stratège marketing digital avec une expertise en growth hacking.',
     image: '/images/team/avatar.png'

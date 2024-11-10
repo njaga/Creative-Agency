@@ -1,133 +1,250 @@
 <template>
-  <div class="py-12 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div
-        v-motion
-        :initial="{ opacity: 0, y: 20 }"
-        :enter="{ opacity: 1, y: 0 }"
-        class="text-center mb-12"
-      >
-        <h1 class="text-4xl font-bold text-blue-600 mb-4">Développement Mobile</h1>
-        <p class="text-gray-600 max-w-2xl mx-auto">
-          Applications mobiles performantes et intuitives pour iOS et Android
-        </p>
+  <div class="relative overflow-hidden">
+    <!-- Hero Section -->
+    <section class="py-24 relative">
+      <div class="absolute inset-0">
+        <div class="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-br from-blue-100/30 to-transparent rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-tr from-yellow-100/30 to-transparent rounded-full blur-3xl"></div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
-        <img
-          v-motion
-          :initial="{ opacity: 0, x: -50 }"
-          :enter="{ opacity: 1, x: 0 }"
-          :delay="200"
-          src="/services/mobile-development.svg"
-          alt="Développement Mobile"
-          class="w-full rounded-lg shadow-lg"
-        />
-        <div
-          v-motion
-          :initial="{ opacity: 0, x: 50 }"
-          :enter="{ opacity: 1, x: 0 }"
-          :delay="400"
-        >
-          <h2 class="text-2xl font-bold text-blue-600 mb-4">Notre Expertise Mobile</h2>
-          <ul class="space-y-4">
-            <li v-for="(item, index) in expertise" :key="index" class="flex items-start">
-              <CheckIcon class="w-6 h-6 text-yellow-400 mr-2 flex-shrink-0" />
-              <span class="text-gray-600">{{ item }}</span>
-            </li>
-          </ul>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="text-center mb-20">
+          <h1 class="text-5xl font-bold mb-6 relative inline-block">
+            <span class="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+              Applications Mobiles
+            </span>
+            <div class="absolute -top-6 -right-6 w-12 h-12 bg-yellow-200/30 rounded-full blur-xl"></div>
+          </h1>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Solutions mobiles innovantes pour iOS et Android
+          </p>
         </div>
       </div>
+    </section>
 
-      <div class="bg-white rounded-lg shadow-lg p-8">
-        <h2 class="text-2xl font-bold text-blue-600 mb-6 text-center">Nos Services Mobile</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div
-            v-for="(feature, index) in features"
-            :key="index"
-            v-motion
-            :initial="{ opacity: 0, y: 20 }"
-            :enter="{ opacity: 1, y: 0 }"
-            :delay="index * 200"
-            class="text-center"
-          >
-            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <component 
-                :is="feature.icon" 
-                class="w-6 h-6 text-blue-600"
-              />
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <!-- Expertise Section -->
+      <section class="mb-24">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl transform rotate-1 opacity-10"></div>
+            <div class="relative bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-blue-100/50">
+              <h2 class="text-3xl font-bold text-blue-800 mb-8">Notre Expertise</h2>
+              <ul class="space-y-6">
+                <li v-for="(item, index) in expertise" :key="index" class="flex items-start group">
+                  <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center mr-4 group-hover:bg-blue-100 transition-colors">
+                    <Icon :name="expertiseIcons[index]" class="w-5 h-5 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-gray-900 mb-1">{{ item.title }}</h3>
+                    <p class="text-gray-600">{{ item.description }}</p>
+                  </div>
+                </li>
+              </ul>
             </div>
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">{{ feature.title }}</h3>
-            <p class="text-gray-600">{{ feature.description }}</p>
+          </div>
+
+          <div class="relative">
+            <img
+              src="/services/mobile-illustration.svg"
+              alt="Développement Mobile"
+              class="w-full rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-yellow-400/20 rounded-full blur-2xl"></div>
+            <div class="absolute -top-6 -left-6 w-24 h-24 bg-blue-400/20 rounded-full blur-2xl"></div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <!-- Technologies Section -->
+      <section class="mb-24">
+        <h2 class="text-3xl font-bold text-center mb-12">Technologies</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div v-for="tech in technologies" :key="tech.name" 
+               class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center group">
+            <img :src="tech.icon" :alt="tech.name" class="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <h3 class="font-semibold text-gray-900">{{ tech.name }}</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="mb-24">
+        <div class="relative">
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl transform -rotate-1 opacity-10"></div>
+          <div class="relative bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-12 border border-blue-100/50">
+            <h2 class="text-3xl font-bold text-blue-800 mb-12 text-center">Nos Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div v-for="service in services" :key="service.title" class="relative group">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="relative p-6">
+                  <div class="w-12 h-12 bg-blue-600/10 rounded-lg flex items-center justify-center mb-4">
+                    <Icon :name="service.icon" class="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 class="text-xl font-semibold mb-2">{{ service.title }}</h3>
+                  <p class="text-gray-600">{{ service.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Section -->
+      <section class="mb-24">
+        <h2 class="text-3xl font-bold text-center mb-12">Notre Processus</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div v-for="(step, index) in process" :key="index" class="relative">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+              {{ index + 1 }}
+            </div>
+            <div class="pt-12 text-center">
+              <h3 class="text-xl font-semibold mb-4">{{ step.title }}</h3>
+              <p class="text-gray-600">{{ step.description }}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="rounded-3xl bg-gradient-to-br from-blue-600 to-blue-700 p-12 relative overflow-hidden mb-24">
+        <div class="absolute inset-0 bg-grid-pattern opacity-[0.05]"></div>
+        <div class="relative z-10 text-center">
+          <h2 class="text-3xl font-bold text-white mb-6">
+            Prêt à Lancer Votre Projet Mobile ?
+          </h2>
+          <p class="text-blue-100 mb-8 text-lg max-w-2xl mx-auto">
+            Contactez-nous pour discuter de votre projet et obtenir un devis personnalisé.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <NuxtLink
+              to="/devis"
+              class="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl 
+                     shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group"
+            >
+              Demander un devis
+              <Icon 
+                name="heroicons:arrow-right" 
+                class="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform"
+              />
+            </NuxtLink>
+            
+            <a
+              href="tel:+221338673500"
+              class="inline-flex items-center px-8 py-4 bg-transparent text-white font-semibold rounded-xl 
+                     border-2 border-white/20 hover:border-white/40
+                     transform hover:scale-105 transition-all duration-300 group"
+            >
+              <Icon 
+                name="heroicons:phone" 
+                class="w-5 h-5 mr-3"
+              />
+              +221 33 867 35 00
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </template>
 
 <script setup>
-import { CheckIcon } from '@heroicons/vue/24/solid'
-import {
-  DevicePhoneMobileIcon,
-  CloudIcon,
-  SparklesIcon
-} from '@heroicons/vue/24/outline'
-
-const expertise = [
-  'Applications iOS natives (Swift)',
-  'Applications Android natives (Kotlin)',
-  'Applications cross-platform (React Native, Flutter)',
-  'Applications PWA',
-  'Intégration avec les API REST',
-  'Tests et déploiement sur les stores'
+const expertiseIcons = [
+  'heroicons:device-phone-mobile',
+  'heroicons:device-tablet',
+  'heroicons:cube-transparent',
+  'heroicons:cloud',
+  'heroicons:shield-check',
+  'heroicons:chart-bar'
 ]
 
-const features = [
+const expertise = [
   {
+    title: 'iOS Native',
+    description: 'Applications natives pour iPhone et iPad'
+  },
+  {
+    title: 'Android Native',
+    description: 'Applications natives pour Android'
+  },
+  {
+    title: 'Cross-Platform',
+    description: 'Solutions multiplateformes avec React Native'
+  },
+  {
+    title: 'Backend & API',
+    description: 'Infrastructure cloud et APIs robustes'
+  },
+  {
+    title: 'Sécurité',
+    description: 'Protection des données et authentification'
+  },
+  {
+    title: 'Analytics',
+    description: 'Suivi et analyse des performances'
+  }
+]
+
+const technologies = [
+  {
+    name: 'iOS / Swift',
+    icon: '/img/tech/swift.svg'
+  },
+  {
+    name: 'Android / Kotlin',
+    icon: '/img/tech/kotlin.svg'
+  },
+  {
+    name: 'React Native',
+    icon: '/img/tech/react-native.svg'
+  },
+  {
+    name: 'Flutter',
+    icon: '/img/tech/flutter.svg'
+  }
+]
+
+const services = [
+  {
+    icon: 'heroicons:device-phone-mobile',
     title: 'Applications Natives',
-    description: 'Applications performantes et optimisées pour chaque plateforme.',
-    icon: DevicePhoneMobileIcon
+    description: 'Développement d\'apps iOS et Android natives'
   },
   {
-    title: 'Solutions Cloud',
-    description: 'Intégration avec des services cloud pour plus de flexibilité.',
-    icon: CloudIcon
+    icon: 'heroicons:cube-transparent',
+    title: 'Apps Cross-Platform',
+    description: 'Solutions multiplateformes optimisées'
   },
   {
-    title: 'UX Mobile',
-    description: 'Expérience utilisateur optimisée pour les appareils mobiles.',
-    icon: SparklesIcon
+    icon: 'heroicons:wrench-screwdriver',
+    title: 'Maintenance & Support',
+    description: 'Support continu et mises à jour'
+  }
+]
+
+const process = [
+  {
+    title: 'Conception',
+    description: 'Design UX/UI et architecture'
+  },
+  {
+    title: 'Développement',
+    description: 'Codage et tests unitaires'
+  },
+  {
+    title: 'Tests',
+    description: 'Tests qualité et beta testing'
+  },
+  {
+    title: 'Déploiement',
+    description: 'Publication et maintenance'
   }
 ]
 </script>
 
 <style scoped>
-.bg-blue-600 {
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-}
-
-.text-blue-600 {
-  color: #2563eb;
-}
-
-.text-yellow-400 {
-  color: #fbbf24;
-}
-
-.bg-blue-100 {
-  background-color: #dbeafe;
-}
-
-.text-gray-600 {
-  color: #4b5563;
-}
-
-.shadow-lg {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-.rounded-lg {
-  border-radius: 0.5rem;
+.bg-grid-pattern {
+  background-image: radial-gradient(circle, #4B5563 1px, transparent 1px);
+  background-size: 30px 30px;
 }
 </style>

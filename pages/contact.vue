@@ -84,14 +84,23 @@
                 </div>
               </div>
 
-              <BaseButton
-                type="submit"
+              <!-- Messages d'erreur/succès -->
+              <div v-if="error" class="p-4 bg-red-50 text-red-600 rounded-xl">
+                {{ error }}
+              </div>
+
+              <div v-if="success" class="p-4 bg-green-50 text-green-600 rounded-xl">
+                Message envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.
+              </div>
+
+              <SubmitButton
                 variant="primary"
                 icon="heroicons:paper-airplane"
                 class="w-full h-14 text-lg"
+                :disabled="loading"
               >
-                Envoyer le message
-              </BaseButton>
+                {{ loading ? 'Envoi en cours...' : 'Envoyer le message' }}
+              </SubmitButton>
             </form>
           </div>
         </div>
@@ -183,7 +192,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import BaseButton from '~/components/ui/BaseButton.vue'
+import SubmitButton from '~/components/ui/SubmitButton.vue'
 
 const form = ref({
   name: '',
@@ -191,9 +200,43 @@ const form = ref({
   message: ''
 })
 
-const handleSubmit = () => {
-  // Logique d'envoi du formulaire
-  console.log('Form submitted:', form.value)
+const loading = ref(false)
+const error = ref('')
+const success = ref(false)
+
+const handleSubmit = async () => {
+  try {
+    loading.value = true
+    error.value = ''
+    success.value = false
+
+    const response = await fetch('http://localhost:3001/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(form.value)
+    })
+
+    const data = await response.json()
+
+    if (!data.success) {
+      throw new Error(data.error || 'Une erreur est survenue')
+    }
+
+    // Réinitialiser le formulaire
+    form.value = {
+      name: '',
+      email: '',
+      message: ''
+    }
+    
+    success.value = true
+  } catch (err) {
+    error.value = err.message
+  } finally {
+    loading.value = false
+  }
 }
 </script>
 

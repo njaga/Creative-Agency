@@ -44,7 +44,9 @@
           </div>
         </div>
       </div>
-      <TeamSection />
+      <!-- Equipe
+       <TeamSection /> 
+       -->
     </div>
   </div>
 </template>

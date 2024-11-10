@@ -10,16 +10,22 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
     "lint:fix": "eslint --ext .js,.ts,.vue --ignore-path .gitignore . --fix",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "server": "node server/index.js",
+    "dev:all": "concurrently \"npm run dev\" \"npm run server\""
   },
   "dependencies": {
     "@heroicons/vue": "^2.1.5",
+    "@sendgrid/mail": "^8.1.4",
     "@tailwindcss/forms": "^0.5.9",
     "@tailwindcss/typography": "^0.5.15",
     "@tsparticles/engine": "^3.5.0",
     "@tsparticles/slim": "^3.5.0",
     "@tsparticles/vue3": "^3.0.1",
     "@vueuse/motion": "^2.2.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
     "framer-motion": "^11.11.11",
     "nuxt": "^3.14.159",
     "nuxt-icon": "^1.0.0-beta.7",
@@ -29,6 +35,9 @@
     "vue-router": "latest"
   },
   "devDependencies": {
+    "@iconify-json/heroicons": "^1.2.1",
+    "@iconify-json/mdi": "^1.2.1",
+    "@iconify-json/ri": "^1.2.3",
     "@nuxt/schema": "^3.14.159",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/tailwindcss": "^6.12.2",
@@ -36,6 +45,7 @@
     "@types/vue": "^1.0.31",
     "@typescript-eslint/eslint-plugin": "^8.13.0",
     "@typescript-eslint/parser": "^8.13.0",
+    "concurrently": "^8.0.1",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-nuxt": "^4.0.0",

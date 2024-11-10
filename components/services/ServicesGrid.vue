@@ -93,7 +93,7 @@ const servicesList = computed(() => [
     ],
     startingPrice: '500 000',
     duration: '4-8 semaines',
-    link: '#web'
+    link: '/services/web'
   },
   {
     title: 'Applications métiers',
@@ -107,7 +107,7 @@ const servicesList = computed(() => [
     ],
     startingPrice: '1 500 000',
     duration: '2-4 mois',
-    link: '#business'
+    link: '/services/business-apps'
   },
   {
     title: 'Marketing digital',
@@ -121,7 +121,7 @@ const servicesList = computed(() => [
     ],
     startingPrice: '300 000',
     duration: 'Mensuel',
-    link: '#marketing'
+    link: '/services/marketing'
   },
   {
     title: 'Matériel informatique',
@@ -135,7 +135,7 @@ const servicesList = computed(() => [
     ],
     startingPrice: '200 000',
     duration: 'Sur devis',
-    link: '#hardware'
+    link: '/services/hardware'
   },
   {
     title: 'Développement mobile',
@@ -149,7 +149,7 @@ const servicesList = computed(() => [
     ],
     startingPrice: '2 000 000',
     duration: '3-6 mois',
-    link: '#mobile'
+    link: '/services/mobile'
   },
   {
     title: 'Design UI/UX',
@@ -163,7 +163,7 @@ const servicesList = computed(() => [
     ],
     startingPrice: '400 000',
     duration: '2-4 semaines',
-    link: '#design'
+    link: '/services/design'
   }
 ])
 </script> 
