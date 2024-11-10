@@ -40,7 +40,7 @@
             </MaterialButton>
             
             <MaterialButton
-              to="#services"
+              href="#services"
               variant="outline"
               size="lg"
               icon="heroicons:arrow-down"
@@ -52,8 +52,10 @@
       </div>
     </div>
     
-    <!-- Services Grid -->
-    <ServicesGrid />
+    <!-- Services Grid avec ID -->
+    <div id="services">
+      <ServicesGrid />
+    </div>
     
     <!-- Why Choose Us -->
     <WhyChooseUs />
