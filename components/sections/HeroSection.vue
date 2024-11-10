@@ -36,28 +36,39 @@
     </div>
     
     <!-- Ajout d'une section de confiance -->
-    <div class="mt-16 border-t border-white/10 overflow-hidden">
+    <div class="mt-16 border-t border-white/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-        <p class="text-center text-sm text-blue-200 mb-4">Ils nous font confiance</p>
+        <!-- Titre mis en valeur -->
+        <div class="text-center mb-8">
+          <h2 class="text-xl sm:text-2xl font-bold">
+            <span class="bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent">
+              Ils nous font confiance
+            </span>
+          </h2>
+          <div class="w-20 h-1 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto mt-3 rounded-full"></div>
+        </div>
         
-        <div class="relative">
+        <!-- Conteneur du carousel avec masque -->
+        <div class="overflow-hidden">
           <div class="flex space-x-12 animate-scroll">
+            <!-- Premier groupe de logos -->
             <div class="flex space-x-12 min-w-max">
               <img 
                 v-for="i in 5" 
                 :key="`logo-${i}`"
                 :src="`/clients/client${i}.svg`" 
                 :alt="`Client ${i}`" 
-                class="h-8 sm:h-10 object-contain"
+                class="h-8 sm:h-10 object-contain opacity-80 hover:opacity-100 transition-opacity"
               >
             </div>
+            <!-- Clone du premier groupe pour le défilement continu -->
             <div class="flex space-x-12 min-w-max">
               <img 
                 v-for="i in 5" 
                 :key="`logo-clone-${i}`"
                 :src="`/clients/client${i}.svg`" 
                 :alt="`Client ${i}`" 
-                class="h-8 sm:h-10 object-contain"
+                class="h-8 sm:h-10 object-contain opacity-80 hover:opacity-100 transition-opacity"
               >
             </div>
           </div>
@@ -89,29 +100,21 @@
   display: flex;
 }
 
-/* Effet de fondu sur les bords */
-.relative::before,
-.relative::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100px;
-  z-index: 2;
-}
-
-.relative::before {
-  left: 0;
-  background: linear-gradient(to right, rgb(30 58 138), transparent);
-}
-
-.relative::after {
-  right: 0;
-  background: linear-gradient(to left, rgb(30 58 138), transparent);
-}
-
 /* Pause au survol */
 .animate-scroll:hover {
   animation-play-state: paused;
+}
+
+/* Effet sur les logos */
+.opacity-80 {
+  opacity: 0.8;
+}
+
+.hover\:opacity-100:hover {
+  opacity: 1;
+}
+
+.transition-opacity {
+  transition: opacity 0.3s ease;
 }
 </style>
