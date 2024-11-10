@@ -13,7 +13,7 @@
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <NuxtLink 
-              to="/contact"
+              to="/devis"
               class="bg-yellow-400 text-blue-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-yellow-300 transition-all text-center"
             >
               Demander un devis gratuit

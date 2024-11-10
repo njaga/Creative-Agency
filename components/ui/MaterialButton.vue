@@ -30,7 +30,7 @@
 interface Props {
   to?: string
   href?: string
-  variant?: 'primary' | 'secondary' | 'outline' | 'glass'
+  variant?: 'primary' | 'secondary' | 'outline' | 'glass' | 'yellow'
   size?: 'sm' | 'md' | 'lg'
   icon?: string
 }
@@ -44,7 +44,8 @@ const variantClasses = computed(() => ({
   'bg-gradient-to-r from-blue-600 to-blue-800 text-white hover:from-blue-700 hover:to-blue-900': props.variant === 'primary',
   'bg-gray-100 text-gray-800 hover:bg-gray-200': props.variant === 'secondary',
   'border-2 border-blue-600 text-blue-600 hover:bg-blue-50': props.variant === 'outline',
-  'bg-white/10 backdrop-blur-md text-white border border-white/20 hover:bg-white/20': props.variant === 'glass'
+  'bg-white/10 backdrop-blur-md text-white border border-white/20 hover:bg-white/20': props.variant === 'glass',
+  'bg-gradient-to-r from-yellow-400 to-yellow-500 text-blue-800 hover:from-yellow-500 hover:to-yellow-600': props.variant === 'yellow'
 }))
 
 const sizeClasses = computed(() => ({

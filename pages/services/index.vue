@@ -1,5 +1,11 @@
 <template>
   <div class="relative overflow-hidden">
+    <AppHead
+      title="Nos Services Informatiques"
+      description="Découvrez nos solutions digitales sur mesure : développement web, infrastructure IT, cloud computing et plus encore."
+      image="/images/services-og.jpg"
+    />
+
     <!-- Hero Section -->
     <div class="relative bg-gradient-to-b from-blue-50 to-white py-32 overflow-hidden">
       <!-- Blobs décoratifs -->
@@ -24,21 +30,23 @@
           </p>
 
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <BaseButton
+            <MaterialButton
               to="/contact"
               variant="primary"
+              size="lg"
               icon="heroicons:arrow-right"
             >
               Démarrer un projet
-            </BaseButton>
+            </MaterialButton>
             
-            <BaseButton
+            <MaterialButton
               to="#services"
               variant="outline"
+              size="lg"
               icon="heroicons:arrow-down"
             >
               Découvrir nos services
-            </BaseButton>
+            </MaterialButton>
           </div>
         </div>
       </div>
@@ -52,9 +60,10 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import ServicesGrid from '~/components/services/ServicesGrid.vue'
 import WhyChooseUs from '~/components/services/WhyChooseUs.vue'
+import MaterialButton from '~/components/ui/MaterialButton.vue'
 </script>
 
 <style scoped>

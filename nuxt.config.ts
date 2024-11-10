@@ -38,9 +38,6 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    '/services': {
-      redirect: { statusCode: 301, to: '/services/' }
-    },
     '/services/**': {
       swr: true
     }

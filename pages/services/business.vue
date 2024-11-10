@@ -1,5 +1,10 @@
 <template>
   <div class="relative overflow-hidden">
+    <AppHead
+      title="Solutions Business"
+      description="Des solutions sur mesure pour optimiser et développer votre activité"
+      image="/images/business-og.jpg"
+    />
     <!-- Hero Section -->
     <section class="py-24 relative">
       <div class="absolute inset-0">

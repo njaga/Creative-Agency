@@ -1,5 +1,10 @@
 <template>
   <div class="relative overflow-hidden">
+    <AppHead
+      title="Design & Création"
+      description="Solutions créatives pour une identité visuelle impactante"
+      image="/images/design-og.jpg"
+    />
     <!-- Hero Section -->
     <section class="py-24 relative">
       <div class="absolute inset-0">

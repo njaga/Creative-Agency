@@ -1,5 +1,10 @@
 <template>
   <div class="relative overflow-hidden">
+    <AppHead
+      title="À Propos de Nous"
+      description="Découvrez l'histoire et les valeurs de notre entreprise, qui nous aident à fournir des solutions sur mesure pour vos besoins en transformation digitale."
+      image="/images/about-og.jpg"
+    />
     <HeroSection />
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <HistorySection />

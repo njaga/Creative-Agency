@@ -1,5 +1,10 @@
 <template>
   <div class="relative overflow-hidden">
+    <AppHead
+      title="Solutions Matérielles"
+      description="Équipements professionnels et solutions d'infrastructure IT"
+      image="/images/hardware-og.jpg"
+    />
     <!-- Hero Section -->
     <section class="py-24 relative">
       <div class="absolute inset-0">

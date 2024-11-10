@@ -1,5 +1,10 @@
 <template>
   <div class="relative overflow-hidden">
+    <AppHead
+      title="Création de Sites Web"
+      description="Des solutions web modernes et performantes pour votre présence en ligne"
+      image="/images/web-og.jpg"
+    />
     <!-- Hero Section -->
     <section class="py-24 relative">
       <div class="absolute inset-0">

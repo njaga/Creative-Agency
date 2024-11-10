@@ -1,5 +1,10 @@
 <template>
   <div class="relative overflow-hidden">
+    <AppHead
+      title="Marketing Digital"
+      description="Stratégies digitales innovantes pour booster votre visibilité et votre croissance"
+      image="/images/marketing-og.jpg"
+    />
     <!-- Hero Section -->
     <section class="py-24 relative">
       <div class="absolute inset-0">

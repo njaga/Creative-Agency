@@ -1,5 +1,10 @@
 <template>
   <div class="relative overflow-hidden">
+    <AppHead
+      title="Développement Mobile"
+      description="Applications mobiles natives et cross-platform pour iOS et Android"
+      image="/images/mobile-og.jpg"
+    />
     <!-- Hero Section -->
     <section class="py-24 relative">
       <div class="absolute inset-0">

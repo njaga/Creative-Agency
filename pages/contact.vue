@@ -1,5 +1,10 @@
 <template>
   <div class="relative py-24 overflow-hidden">
+    <AppHead
+      title="Contactez-nous"
+      description="Contactez-nous pour toute question ou demande d'information."
+      image="/images/contact-og.jpeg"
+    />
     <!-- Fond décoratif -->
     <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-white -z-10">
       <div class="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-br from-blue-400/20 to-transparent rounded-full blur-3xl"></div>
