@@ -1,7 +1,7 @@
 <template>
   <AppHead
     title="Accueil"
-    description="Bienvenue sur le site de Système Informatique, votre partenaire pour la transformation digitale de votre entreprise."
+    description="Bienvenue sur le site de ABI (Arame Business Informatique), votre partenaire pour la transformation digitale de votre entreprise."
     image="/logo.jpg"
   />
   <main>
