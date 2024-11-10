@@ -121,15 +121,31 @@
   
   <script setup lang="ts">
   import { ref, computed } from 'vue'
-  import EquipmentCard from '~/components/cards/EquipmentCard.vue'
   import MaterialButton from '~/components/ui/MaterialButton.vue'
-  
+
+  // Définition des interfaces localement si besoin
+  interface Equipment {
+    title: string
+    description: string
+    image: string
+    link: string
+    category: string
+    features: string[]
+    tag?: string
+  }
+
+  interface Service {
+    title: string
+    description: string
+    icon: string
+  }
+
   // Catégories
   const categories = ['Tous', 'Ordinateurs', 'Serveurs', 'Réseaux', 'Impression', 'Sécurité']
-  const selectedCategory = ref('Tous')
-  
+  const selectedCategory = ref<string>('Tous')
+
   // Liste des équipements
-  const equipments = ref([
+  const equipments = ref<Equipment[]>([
     {
       title: 'Postes de Travail Pro',
       description: 'Stations de travail performantes pour les professionnels',
@@ -212,9 +228,9 @@
       ]
     }
   ])
-  
+
   // Services inclus
-  const services = ref([
+  const services = ref<Service[]>([
     {
       title: 'Installation Professionnelle',
       description: 'Configuration sur site et mise en service par nos experts certifiés',
@@ -231,7 +247,7 @@
       icon: 'heroicons:phone'
     }
   ])
-  
+
   // Filtrage des équipements
   const filteredEquipments = computed(() => {
     if (selectedCategory.value === 'Tous') {

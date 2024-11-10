@@ -166,4 +166,8 @@
       link: '/services/design'
     }
   ])
+
+  defineExpose({
+    // exposez les méthodes/propriétés nécessaires
+  })
   </script> 

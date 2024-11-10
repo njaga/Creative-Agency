@@ -26,8 +26,8 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-09',
 
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' },
-    layoutTransition: { name: 'layout', mode: 'out-in' },
+    pageTransition: false,
+    layoutTransition: false,
     head: {
       title: 'ABI Group',
       meta: [
@@ -38,8 +38,12 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    '/services/**': {
-      swr: true
+    '/': { prerender: true },
+    '/services': { ssr: true },
+    '/materiel': { ssr: true },
+    '/contact': { prerender: true },
+    '/services/**': { 
+      static: true
     }
   }
 })
