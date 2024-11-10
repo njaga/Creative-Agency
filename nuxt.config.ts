@@ -45,5 +45,20 @@ export default defineNuxtConfig({
     '/services/**': { 
       static: true
     }
+  },
+
+  runtimeConfig: {
+    // Variables privées (côté serveur)
+    sendgridApiKey: process.env.SENDGRID_API_KEY,
+    
+    // Variables publiques (côté client)
+    public: {
+      apiBase: process.env.API_BASE || '/api'
+    }
+  },
+
+  // Configuration nitro pour Vercel
+  nitro: {
+    preset: 'vercel'
   }
 })

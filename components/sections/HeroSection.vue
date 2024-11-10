@@ -36,17 +36,31 @@
     </div>
     
     <!-- Ajout d'une section de confiance -->
-    <div class="mt-16 border-t border-white/10">
+    <div class="mt-16 border-t border-white/10 overflow-hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
         <p class="text-center text-sm text-blue-200 mb-4">Ils nous font confiance</p>
-        <div class="flex flex-wrap justify-center gap-8 opacity-70 hover:opacity-100 transition-opacity">
-          <img 
-            v-for="i in 5" 
-            :key="i"
-            :src="`/clients/client${i}.svg`" 
-            :alt="`Client ${i}`" 
-            class="h-8 sm:h-10 hover:scale-105 transition-transform"
-          >
+        
+        <div class="relative">
+          <div class="flex space-x-12 animate-scroll">
+            <div class="flex space-x-12 min-w-max">
+              <img 
+                v-for="i in 5" 
+                :key="`logo-${i}`"
+                :src="`/clients/client${i}.svg`" 
+                :alt="`Client ${i}`" 
+                class="h-8 sm:h-10 object-contain"
+              >
+            </div>
+            <div class="flex space-x-12 min-w-max">
+              <img 
+                v-for="i in 5" 
+                :key="`logo-clone-${i}`"
+                :src="`/clients/client${i}.svg`" 
+                :alt="`Client ${i}`" 
+                class="h-8 sm:h-10 object-contain"
+              >
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -62,5 +76,42 @@
   0% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
   100% { transform: translateY(0px); }
+}
+
+/* Animation du défilement */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+  display: flex;
+}
+
+/* Effet de fondu sur les bords */
+.relative::before,
+.relative::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+}
+
+.relative::before {
+  left: 0;
+  background: linear-gradient(to right, rgb(30 58 138), transparent);
+}
+
+.relative::after {
+  right: 0;
+  background: linear-gradient(to left, rgb(30 58 138), transparent);
+}
+
+/* Pause au survol */
+.animate-scroll:hover {
+  animation-play-state: paused;
 }
 </style>

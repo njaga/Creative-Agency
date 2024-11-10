@@ -209,24 +209,26 @@ const loading = ref(false)
 const error = ref('')
 const success = ref(false)
 
+const config = useRuntimeConfig()
+const baseURL = config.public.apiBase
+
 const handleSubmit = async () => {
   try {
     loading.value = true
     error.value = ''
     success.value = false
 
-    const response = await fetch('http://localhost:3001/api/contact', {
+    const { data, error: apiError } = await useFetch('/api/contact', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(form.value)
+      body: form.value
     })
 
-    const data = await response.json()
+    if (apiError.value) {
+      throw new Error(apiError.value.message || 'Une erreur est survenue')
+    }
 
-    if (!data.success) {
-      throw new Error(data.error || 'Une erreur est survenue')
+    if (!data.value?.success) {
+      throw new Error(data.value?.error || 'Une erreur est survenue')
     }
 
     // Réinitialiser le formulaire
