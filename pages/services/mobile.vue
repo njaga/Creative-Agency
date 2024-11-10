@@ -46,7 +46,7 @@
 
           <div class="relative">
             <img
-              src="/services/mobile-illustration.svg"
+              src="/services/mobile-development.svg"
               alt="Développement Mobile"
               class="w-full rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
             />
@@ -188,19 +188,19 @@ const expertise = [
 const technologies = [
   {
     name: 'iOS / Swift',
-    icon: '/img/tech/swift.svg'
+    icon: '/services/tech/swift.svg'
   },
   {
     name: 'Android / Kotlin',
-    icon: '/img/tech/kotlin.svg'
+    icon: '/services/tech/kotlin.svg'
   },
   {
     name: 'React Native',
-    icon: '/img/tech/react-native.svg'
+    icon: '/services/tech/react-native.svg'
   },
   {
     name: 'Flutter',
-    icon: '/img/tech/flutter.svg'
+    icon: '/services/tech/flutter.svg'
   }
 ]
 
