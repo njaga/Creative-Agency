@@ -122,6 +122,7 @@
   <script setup lang="ts">
   import { ref, computed } from 'vue'
   import MaterialButton from '~/components/ui/MaterialButton.vue'
+  import EquipmentCard from '~/components/cards/EquipmentCard.vue'
 
   // Définition des interfaces localement si besoin
   interface Equipment {

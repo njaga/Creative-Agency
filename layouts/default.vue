@@ -152,13 +152,13 @@
           <div class="md:col-span-4">
             <h3 class="text-xl font-semibold text-white mb-6">Contact</h3>
             <div class="space-y-6">
-              <a href="mailto:contact@abi.com" class="flex items-center group">
+              <a href="mailto:contact@aramebusiness.com" class="flex items-center group">
                 <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mr-4 group-hover:bg-white/10 transition-all duration-300">
                   <EnvelopeIcon class="h-5 w-5 text-yellow-400"/>
                 </div>
                 <div>
                   <p class="text-sm text-blue-100/70">Email</p>
-                  <p class="text-white group-hover:text-yellow-400 transition-colors duration-300">contact@abi.com</p>
+                  <p class="text-white group-hover:text-yellow-400 transition-colors duration-300">contact@aramebusiness.com</p>
                 </div>
               </a>
 
@@ -168,7 +168,7 @@
                 </div>
                 <div>
                   <p class="text-sm text-blue-100/70">Téléphone</p>
-                  <p class="text-white group-hover:text-yellow-400 transition-colors duration-300">+221 XX XXX XX XX</p>
+                  <p class="text-white group-hover:text-yellow-400 transition-colors duration-300">+221 78 163 34 19</p>
                 </div>
               </a>
 

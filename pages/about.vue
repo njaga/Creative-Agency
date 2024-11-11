@@ -44,7 +44,7 @@
                 name="heroicons:phone" 
                 class="w-5 h-5 mr-3"
               />
-              +221 XX XXX XX XX
+              +221 78 163 34 19
             </a>
           </div>
         </div>
