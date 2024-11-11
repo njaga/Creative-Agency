@@ -13,7 +13,7 @@
         </div>
   
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div class="text-center mb-20">
+          <div class="text-center mb-2">
             <h1 class="text-5xl font-bold mb-6 relative inline-block">
               <span class="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
                 Catalogue Matériel
