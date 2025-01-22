@@ -46,7 +46,7 @@
           </span>
 
           <!-- Container d'image amélioré -->
-          <div class="relative h-48 bg-gradient-to-br from-blue-50 to-gray-50 p-6 overflow-hidden">
+          <div class="relative h-56 bg-gradient-to-br from-blue-50 to-gray-50 p-4 overflow-hidden">
             <!-- Cercle décoratif -->
             <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
               <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-blue-100/50 rounded-full blur-2xl"></div>
@@ -55,7 +55,7 @@
             <img 
               :src="item.image" 
               :alt="item.title" 
-              class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 relative z-10"
+              class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 relative z-10"
             >
           </div>
 
@@ -178,30 +178,17 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import type { Equipment, Service } from '~/types/equipment'
+import { defaultEquipments } from '~/data/equipments'
 import SectionHeader from '~/components/ui/SectionHeader.vue'
 import BaseButton from '~/components/ui/BaseButton.vue'
 
-interface Equipment {
-  title: string
-  description: string
-  image: string
-  link: string
-  features?: string[]
-  tag?: string
-  badge?: string
-  linkText?: string
-}
-
-interface Service {
-  title: string
-  description: string
-  icon: string
-}
-
-// Définition des props
-const props = defineProps<{
-  equipments: Equipment[]
-}>()
+// Définition des props avec valeur par défaut
+const props = withDefaults(defineProps<{
+  equipments?: Equipment[]
+}>(), {
+  equipments: () => defaultEquipments
+})
 
 // Services définis localement avec ref
 const servicesList = ref<Service[]>([
