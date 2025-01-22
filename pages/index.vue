@@ -9,6 +9,7 @@
     <ServicesSection />
     <AboutSection />
     <EquipmentSection :equipments="equipments" />
+    <EpiSection :epis="epis" />
     <DigitalTransformSection :benefits="digitalBenefits" />
     <WebServicesSection />
     <CtaSection />
@@ -26,6 +27,7 @@ import WebServicesSection from '~/components/sections/WebServicesSection.vue'
 import CtaSection from '~/components/sections/CtaSection.vue'
 import AboutSection from '~/components/sections/AboutSection.vue'
 import FaqSection from '~/components/sections/FaqSection.vue'
+import EpiSection from '~/components/sections/EpiSection.vue'
 // Types
 interface Equipment {
   title: string
@@ -36,6 +38,15 @@ interface Equipment {
   tag?: string
   badge?: string
   linkText?: string
+}
+
+interface Epi {
+  title: string
+  description: string
+  image: string
+  link: string
+  features: string[]
+  tag?: string
 }
 
 interface Benefit {
@@ -52,7 +63,8 @@ defineComponent({
     EquipmentSection,
     DigitalTransformSection,
     WebServicesSection,
-    CtaSection
+    CtaSection,
+    EpiSection
   }
 })
 
@@ -135,6 +147,44 @@ const equipments = ref<Equipment[]>([
   }
 ])
 
+const epis = ref<Epi[]>([
+  {
+    title: 'Casques de Chantier',
+    description: 'Protection de la tête aux normes EN 397',
+    image: '/epi/casque.avif',
+    link: '/epi/protection-tete',
+    features: [
+      'Résistance aux chocs',
+      'Ajustement facile',
+      'Certification CE'
+    ],
+    tag: 'Best-seller'
+  },
+  {
+    title: 'Lunettes de Protection',
+    description: 'Protection oculaire professionnelle',
+    image: '/epi/lunettes.avif',
+    link: '/epi/protection-yeux',
+    features: [
+      'Anti-rayures',
+      'Anti-buée',
+      'Protection UV'
+    ]
+  },
+  {
+    title: 'Masques FFP2',
+    description: 'Protection respiratoire certifiée',
+    image: '/epi/masque.avif',
+    link: '/epi/protection-respiratoire',
+    features: [
+      'Filtration 94%',
+      'Confort optimal',
+      'Pliable'
+    ],
+    tag: 'Nouveau'
+  }
+])
+
 const digitalBenefits = ref<Benefit[]>([
   {
     title: 'Gain de Productivité',
@@ -156,6 +206,7 @@ const digitalBenefits = ref<Benefit[]>([
 // Exposer les données pour le template
 defineExpose({
   equipments,
+  epis,
   digitalBenefits
 })
 </script>

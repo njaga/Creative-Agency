@@ -140,7 +140,7 @@
                     <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mr-4 group-hover:bg-white/20 transition-colors">
                       <Icon name="heroicons:phone" class="w-6 h-6 text-yellow-400" />
                     </div>
-                    <span class="group-hover:text-yellow-400 transition-colors">+221 78 163 34 19</span>
+                    <span class="group-hover:text-yellow-400 transition-colors">+221 77 342 22 48</span>
                   </a>
                   
                   <a href="mailto:contact@aramebusiness.com" class="flex items-center group">

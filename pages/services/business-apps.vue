@@ -5,24 +5,101 @@
       description="Des solutions sur mesure pour optimiser vos processus métier"
       image="/images/business-apps-og.jpg"
     />
-    <!-- Hero Section -->
-    <section class="py-24 relative">
-      <div class="absolute inset-0">
-        <div class="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-br from-blue-100/30 to-transparent rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-tr from-yellow-100/30 to-transparent rounded-full blur-3xl"></div>
+    
+    <!-- Hero Section Améliorée -->
+    <section class="relative min-h-[90vh] flex items-center">
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-white"></div>
+      <div class="absolute right-0 top-0 w-1/2 h-full">
+        <div class="absolute inset-0 bg-dots-pattern opacity-5"></div>
       </div>
-
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div class="text-center mb-20">
-          <h1 class="text-5xl font-bold mb-6 relative inline-block">
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-2xl">
+          <span class="inline-block px-4 py-1 rounded-full bg-blue-100 text-blue-600 text-sm font-medium mb-6">
+            Solutions Métier Professionnelles
+          </span>
+          <h1 class="text-6xl font-bold mb-6 leading-tight">
             <span class="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-              Applications Métier
+              Optimisez vos processus métier
             </span>
-            <div class="absolute -top-6 -right-6 w-12 h-12 bg-yellow-200/30 rounded-full blur-xl"></div>
           </h1>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            Des solutions sur mesure pour optimiser vos processus métier
+          <p class="text-xl text-gray-600 mb-8">
+            Des solutions sur mesure pour digitaliser et automatiser vos processus d'entreprise.
           </p>
+          <div class="flex gap-4">
+            <NuxtLink
+              to="/contact"
+              class="px-8 py-4 bg-blue-600 text-white rounded-xl hover:bg-blue-700 
+                     transition-all duration-300 inline-flex items-center group"
+            >
+              Démarrer votre projet
+              <Icon 
+                name="heroicons:arrow-right" 
+                class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
+              />
+            </NuxtLink>
+            <a
+              href="#why-apps"
+              class="px-8 py-4 border-2 border-blue-200 text-blue-600 rounded-xl 
+                     hover:border-blue-300 transition-all duration-300"
+            >
+              En savoir plus
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pourquoi une application métier ? -->
+    <section id="why-apps" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Pourquoi digitaliser vos processus ?
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            La transformation digitale est devenue un enjeu majeur pour la compétitivité des entreprises
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div v-for="(raison, index) in raisonsApps" :key="index"
+               class="p-8 rounded-2xl bg-gradient-to-br from-white to-blue-50 hover:shadow-xl transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center mb-6">
+              <Icon :name="raison.icon" class="w-6 h-6"/>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">{{ raison.title }}</h3>
+            <p class="text-gray-600">{{ raison.description }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pourquoi nous choisir ? -->
+    <section class="py-24 bg-gradient-to-br from-blue-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Pourquoi nous choisir ?
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Notre expertise et notre approche font la différence
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div v-for="(avantage, index) in avantages" :key="index"
+               class="flex gap-6 p-6 rounded-2xl bg-white hover:shadow-xl transition-all duration-300">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center">
+                <Icon :name="avantage.icon" class="w-6 h-6"/>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ avantage.title }}</h3>
+              <p class="text-gray-600">{{ avantage.description }}</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -116,7 +193,7 @@
                 name="heroicons:phone" 
                 class="w-5 h-5 mr-3"
               />
-              +221 33 867 35 00
+              +221 77 342 22 48
             </a>
           </div>
         </div>
@@ -176,9 +253,70 @@ const process = [
     description: 'Accompagnement des utilisateurs et mise en production progressive.'
   }
 ]
+
+const raisonsApps = [
+  {
+    icon: 'heroicons:clock',
+    title: 'Gain de temps',
+    description: 'Automatisez vos tâches répétitives et libérez du temps pour vos activités à valeur ajoutée.'
+  },
+  {
+    icon: 'heroicons:chart-bar',
+    title: 'Productivité accrue',
+    description: 'Optimisez vos processus et augmentez l\'efficacité de vos équipes.'
+  },
+  {
+    icon: 'heroicons:document-check',
+    title: 'Réduction des erreurs',
+    description: 'Minimisez les erreurs humaines grâce à l\'automatisation des processus.'
+  },
+  {
+    icon: 'heroicons:presentation-chart-line',
+    title: 'Meilleur pilotage',
+    description: 'Disposez d\'indicateurs précis pour prendre les bonnes décisions.'
+  },
+  {
+    icon: 'heroicons:users',
+    title: 'Collaboration facilitée',
+    description: 'Améliorez la communication et le partage d\'information entre les équipes.'
+  },
+  {
+    icon: 'heroicons:shield-check',
+    title: 'Sécurité renforcée',
+    description: 'Protégez vos données sensibles avec des solutions sécurisées.'
+  }
+]
+
+const avantages = [
+  {
+    icon: 'heroicons:code-bracket-square',
+    title: 'Expertise technique',
+    description: 'Notre équipe maîtrise les dernières technologies pour des solutions robustes et évolutives.'
+  },
+  {
+    icon: 'heroicons:light-bulb',
+    title: 'Approche sur mesure',
+    description: 'Nous développons des solutions parfaitement adaptées à vos processus métier.'
+  },
+  {
+    icon: 'heroicons:clock',
+    title: 'Accompagnement complet',
+    description: 'De l\'analyse des besoins à la formation des utilisateurs.'
+  },
+  {
+    icon: 'heroicons:shield-check',
+    title: 'Qualité garantie',
+    description: 'Tests rigoureux et maintenance continue de vos applications.'
+  }
+]
 </script>
 
 <style scoped>
+.bg-dots-pattern {
+  background-image: radial-gradient(circle, #4B5563 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
 .bg-grid-pattern {
   background-image: radial-gradient(circle, #4B5563 1px, transparent 1px);
   background-size: 30px 30px;

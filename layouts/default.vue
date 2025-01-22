@@ -168,7 +168,7 @@
                 </div>
                 <div>
                   <p class="text-sm text-blue-100/70">Téléphone</p>
-                  <p class="text-white group-hover:text-yellow-400 transition-colors duration-300">+221 78 163 34 19</p>
+                  <p class="text-white group-hover:text-yellow-400 transition-colors duration-300">+221 77 342 22 48</p>
                 </div>
               </a>
 

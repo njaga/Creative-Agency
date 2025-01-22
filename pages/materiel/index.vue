@@ -142,7 +142,16 @@
   }
 
   // Catégories
-  const categories = ['Tous', 'Ordinateurs', 'Serveurs', 'Réseaux', 'Impression', 'Sécurité']
+  const categories = [
+    'Tous', 
+    'Ordinateurs', 
+    'Serveurs', 
+    'Réseaux', 
+    'Impression', 
+    'Sécurité',
+    'Compteuses',
+    'Badges'
+  ]
   const selectedCategory = ref<string>('Tous')
 
   // Liste des équipements
@@ -227,6 +236,34 @@
         'Autonomie prolongée',
         'Support sur site'
       ]
+    },
+    {
+      title: 'Compteuses de Billets',
+      description: 'Solutions professionnelles de comptage de billets',
+      image: '/equipment/compteuse.png',
+      link: '/services/compteuses',
+      category: 'Compteuses',
+      features: [
+        'Détection des faux billets',
+        'Comptage ultra-rapide',
+        'Multi-devises',
+        'Maintenance incluse'
+      ],
+      tag: 'Nouveau'
+    },
+    {
+      title: 'Imprimantes à Badges',
+      description: 'Solutions d\'impression de badges professionnels',
+      image: '/equipment/badge-printer.png',
+      link: '/services/badges',
+      category: 'Badges',
+      features: [
+        'Impression recto-verso',
+        'Encodage RFID',
+        'Haute qualité d\'impression',
+        'Logiciel de design inclus'
+      ],
+      tag: 'Nouveau'
     }
   ])
 

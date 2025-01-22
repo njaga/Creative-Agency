@@ -5,81 +5,108 @@
       description="Équipements professionnels et solutions d'infrastructure IT"
       image="/images/hardware-og.jpg"
     />
-    <!-- Hero Section -->
-    <section class="py-24 relative">
-      <div class="absolute inset-0">
-        <div class="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-br from-blue-100/30 to-transparent rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-tr from-yellow-100/30 to-transparent rounded-full blur-3xl"></div>
+    
+    <!-- Hero Section Améliorée -->
+    <section class="relative min-h-[90vh] flex items-center">
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-white"></div>
+      <div class="absolute right-0 top-0 w-1/2 h-full">
+        <div class="absolute inset-0 bg-dots-pattern opacity-5"></div>
       </div>
-
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div class="text-center mb-20">
-          <h1 class="text-5xl font-bold mb-6 relative inline-block">
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-2xl">
+          <span class="inline-block px-4 py-1 rounded-full bg-blue-100 text-blue-600 text-sm font-medium mb-6">
+            Solutions Matérielles Professionnelles
+          </span>
+          <h1 class="text-6xl font-bold mb-6 leading-tight">
             <span class="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-              Solutions Matérielles
+              Équipements et Infrastructure IT
             </span>
-            <div class="absolute -top-6 -right-6 w-12 h-12 bg-yellow-200/30 rounded-full blur-xl"></div>
           </h1>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            Équipements professionnels et solutions d'infrastructure IT
+          <p class="text-xl text-gray-600 mb-8">
+            Des solutions matérielles professionnelles pour optimiser votre infrastructure informatique.
           </p>
+          <div class="flex gap-4">
+            <NuxtLink
+              to="/contact"
+              class="px-8 py-4 bg-blue-600 text-white rounded-xl hover:bg-blue-700 
+                     transition-all duration-300 inline-flex items-center group"
+            >
+              Démarrer votre projet
+              <Icon 
+                name="heroicons:arrow-right" 
+                class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
+              />
+            </NuxtLink>
+            <a
+              href="#why-hardware"
+              class="px-8 py-4 border-2 border-blue-200 text-blue-600 rounded-xl 
+                     hover:border-blue-300 transition-all duration-300"
+            >
+              En savoir plus
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <!-- Expertise Section -->
-      <section class="mb-24">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div class="relative">
-            <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl transform rotate-1 opacity-10"></div>
-            <div class="relative bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-blue-100/50">
-              <h2 class="text-3xl font-bold text-blue-800 mb-8">Notre Expertise</h2>
-              <ul class="space-y-6">
-                <li v-for="(item, index) in expertise" :key="index" class="flex items-start group">
-                  <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center mr-4 group-hover:bg-blue-100 transition-colors">
-                    <Icon :name="expertiseIcons[index]" class="w-5 h-5 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 class="font-semibold text-gray-900 mb-1">{{ item.title }}</h3>
-                    <p class="text-gray-600">{{ item.description }}</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="relative">
-            <img
-              src="/services/hardware-illustration.svg"
-              alt="Solutions Matérielles"
-              class="w-full rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
-            />
-            <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-yellow-400/20 rounded-full blur-2xl"></div>
-            <div class="absolute -top-6 -left-6 w-24 h-24 bg-blue-400/20 rounded-full blur-2xl"></div>
-          </div>
+    <!-- Pourquoi choisir nos solutions matérielles ? -->
+    <section id="why-hardware" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Nos Solutions Matérielles
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Des équipements professionnels adaptés à vos besoins
+          </p>
         </div>
-      </section>
-
-      <!-- Services Section -->
-      <section class="mb-24">
-        <h2 class="text-3xl font-bold text-center mb-12">Nos Solutions Matérielles</h2>
+        
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div v-for="service in services" :key="service.title" class="relative group">
-            <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            <div class="relative p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div class="w-12 h-12 bg-blue-600/10 rounded-lg flex items-center justify-center mb-4">
-                <Icon :name="service.icon" class="w-6 h-6 text-blue-600" />
+          <div v-for="service in services" :key="service.title"
+               class="p-8 rounded-2xl bg-gradient-to-br from-white to-blue-50 hover:shadow-xl transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center mb-6">
+              <Icon :name="service.icon" class="w-6 h-6"/>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">{{ service.title }}</h3>
+            <p class="text-gray-600">{{ service.description }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notre Expertise -->
+    <section class="py-24 bg-gradient-to-br from-blue-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Notre Expertise
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Une expertise technique pointue à votre service
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div v-for="(item, index) in expertise" :key="index"
+               class="flex gap-6 p-6 rounded-2xl bg-white hover:shadow-xl transition-all duration-300">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center">
+                <Icon :name="expertiseIcons[index]" class="w-6 h-6"/>
               </div>
-              <h3 class="text-xl font-semibold mb-2">{{ service.title }}</h3>
-              <p class="text-gray-600">{{ service.description }}</p>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ item.title }}</h3>
+              <p class="text-gray-600">{{ item.description }}</p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Maintenance Section -->
-      <section class="mb-24">
+    <!-- Services de Maintenance -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="relative">
           <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl transform -rotate-1 opacity-10"></div>
           <div class="relative bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-12 border border-blue-100/50">
@@ -98,47 +125,47 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- CTA Section -->
-      <section class="rounded-3xl bg-gradient-to-br from-blue-600 to-blue-700 p-12 relative overflow-hidden mb-24">
-        <div class="absolute inset-0 bg-grid-pattern opacity-[0.05]"></div>
-        <div class="relative z-10 text-center">
-          <h2 class="text-3xl font-bold text-white mb-6">
-            Besoin d'Équipements Professionnels ?
-          </h2>
-          <p class="text-blue-100 mb-8 text-lg max-w-2xl mx-auto">
-            Contactez nos experts pour un conseil personnalisé et un devis adapté à vos besoins.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <NuxtLink
-              to="/devis"
-              class="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl 
-                     shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group"
-            >
-              Demander un devis
-              <Icon 
-                name="heroicons:arrow-right" 
-                class="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform"
-              />
-            </NuxtLink>
-            
-            <a
-              href="tel:+221338673500"
-              class="inline-flex items-center px-8 py-4 bg-transparent text-white font-semibold rounded-xl 
-                     border-2 border-white/20 hover:border-white/40
-                     transform hover:scale-105 transition-all duration-300 group"
-            >
-              <Icon 
-                name="heroicons:phone" 
-                class="w-5 h-5 mr-3"
-              />
-              +221 33 867 35 00
-            </a>
-          </div>
+    <!-- CTA Section -->
+    <section class="rounded-3xl bg-gradient-to-br from-blue-600 to-blue-700 p-12 relative overflow-hidden mb-24">
+      <div class="absolute inset-0 bg-grid-pattern opacity-[0.05]"></div>
+      <div class="relative z-10 text-center">
+        <h2 class="text-3xl font-bold text-white mb-6">
+          Besoin d'Équipements Professionnels ?
+        </h2>
+        <p class="text-blue-100 mb-8 text-lg max-w-2xl mx-auto">
+          Contactez nos experts pour un conseil personnalisé et un devis adapté à vos besoins.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <NuxtLink
+            to="/devis"
+            class="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl 
+                   shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group"
+          >
+            Demander un devis
+            <Icon 
+              name="heroicons:arrow-right" 
+              class="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform"
+            />
+          </NuxtLink>
+          
+          <a
+            href="tel:+221338673500"
+            class="inline-flex items-center px-8 py-4 bg-transparent text-white font-semibold rounded-xl 
+                   border-2 border-white/20 hover:border-white/40
+                   transform hover:scale-105 transition-all duration-300 group"
+          >
+            <Icon 
+              name="heroicons:phone" 
+              class="w-5 h-5 mr-3"
+            />
+            +221 77 342 22 48
+          </a>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -235,6 +262,11 @@ const maintenance = [
 </script>
 
 <style scoped>
+.bg-dots-pattern {
+  background-image: radial-gradient(circle, #4B5563 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
 .bg-grid-pattern {
   background-image: radial-gradient(circle, #4B5563 1px, transparent 1px);
   background-size: 30px 30px;

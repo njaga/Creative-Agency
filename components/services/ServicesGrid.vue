@@ -52,10 +52,6 @@
               <!-- Prix et CTA -->
               <div class="mt-auto space-y-4">
                 <div class="flex items-center justify-between">
-                  <div>
-                    <div class="text-sm text-gray-500">À partir de</div>
-                    <div class="text-xl font-bold text-blue-600">{{ service.startingPrice }} FCFA</div>
-                  </div>
                   <div class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm font-medium">
                     {{ service.duration || 'Sur mesure' }}
                   </div>
@@ -91,7 +87,6 @@
         'Interface administration',
         'Hébergement sécurisé'
       ],
-      startingPrice: '500 000',
       duration: '4-8 semaines',
       link: '/services/web'
     },
@@ -105,7 +100,6 @@
         'Formation utilisateurs',
         'Support technique'
       ],
-      startingPrice: '1 500 000',
       duration: '2-4 mois',
       link: '/services/business-apps'
     },
@@ -119,7 +113,6 @@
         'Campagnes publicitaires',
         'Analyse des résultats'
       ],
-      startingPrice: '300 000',
       duration: 'Mensuel',
       link: '/services/marketing'
     },
@@ -133,7 +126,6 @@
         'Installation sur site',
         'Maintenance'
       ],
-      startingPrice: '200 000',
       duration: 'Sur devis',
       link: '/services/hardware'
     },
@@ -147,7 +139,6 @@
         'Performance optimale',
         'Mises à jour régulières'
       ],
-      startingPrice: '2 000 000',
       duration: '3-6 mois',
       link: '/services/mobile'
     },
@@ -161,9 +152,47 @@
         'Tests utilisateurs',
         'Guidelines'
       ],
-      startingPrice: '400 000',
       duration: '2-4 semaines',
       link: '/services/design'
+    },
+    {
+      title: 'Fourniture de compteuses',
+      description: 'Solutions professionnelles de comptage de billets et pièces pour entreprises.',
+      icon: 'heroicons:calculator',
+      features: [
+        'Compteuses de billets',
+        'Compteuses de pièces',
+        'Installation sur site',
+        'Formation et maintenance'
+      ],
+      duration: 'Sur devis',
+      link: '/services/compteuses'
+    },
+    {
+      title: 'Imprimantes à badges',
+      description: 'Équipements d\'impression de badges et cartes professionnelles.',
+      icon: 'heroicons:identification',
+      features: [
+        'Imprimantes haute qualité',
+        'Consommables',
+        'Installation et configuration',
+        'Support technique'
+      ],
+      duration: 'Sur devis',
+      link: '/services/badges'
+    },
+    {
+      title: 'Fourniture d\'EPI',
+      description: 'Équipements de Protection Individuelle pour la sécurité au travail.',
+      icon: 'heroicons:shield-check',
+      features: [
+        'Équipements certifiés',
+        'Conseil personnalisé',
+        'Stock permanent',
+        'Livraison rapide'
+      ],
+      duration: 'Sur devis',
+      link: '/services/epi'
     }
   ])
 

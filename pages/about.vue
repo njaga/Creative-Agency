@@ -44,7 +44,7 @@
                 name="heroicons:phone" 
                 class="w-5 h-5 mr-3"
               />
-              +221 78 163 34 19
+              +221 77 342 22 48
             </a>
           </div>
         </div>
