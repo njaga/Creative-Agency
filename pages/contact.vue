@@ -133,7 +133,7 @@
                     <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mr-4 group-hover:bg-white/20 transition-colors">
                       <Icon name="heroicons:map-pin" class="w-6 h-6 text-yellow-400" />
                     </div>
-                    <span class="group-hover:text-yellow-400 transition-colors">Adresse, Ville, Pays</span>
+                    <span class="group-hover:text-yellow-400 transition-colors">Cité Mbackiyou Faye, Mamelles, Dakar</span>
                   </a>
                   
                   <a href="tel:+221XXXXXXXX" class="flex items-center group">
