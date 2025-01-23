@@ -35,46 +35,6 @@
       </div>
     </div>
     
-    <!-- Ajout d'une section de confiance -->
-    <div class="mt-16 border-t border-white/10">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-        <!-- Titre mis en valeur -->
-        <div class="text-center mb-8">
-          <h2 class="text-xl sm:text-2xl font-bold">
-            <span class="bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent">
-              Ils nous font confiance
-            </span>
-          </h2>
-          <div class="w-20 h-1 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto mt-3 rounded-full"></div>
-        </div>
-        
-        <!-- Conteneur du carousel avec masque -->
-        <div class="overflow-hidden">
-          <div class="flex space-x-12 animate-scroll">
-            <!-- Premier groupe de logos -->
-            <div class="flex space-x-12 min-w-max">
-              <img 
-                v-for="i in 5" 
-                :key="`logo-${i}`"
-                :src="`/clients/client${i}.svg`" 
-                :alt="`Client ${i}`" 
-                class="h-8 sm:h-10 object-contain opacity-80 hover:opacity-100 transition-opacity"
-              >
-            </div>
-            <!-- Clone du premier groupe pour le défilement continu -->
-            <div class="flex space-x-12 min-w-max">
-              <img 
-                v-for="i in 5" 
-                :key="`logo-clone-${i}`"
-                :src="`/clients/client${i}.svg`" 
-                :alt="`Client ${i}`" 
-                class="h-8 sm:h-10 object-contain opacity-80 hover:opacity-100 transition-opacity"
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
 </template>
 
